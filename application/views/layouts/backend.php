@@ -46,22 +46,22 @@
 
     	<div class="sidebar-wrapper">
             <div class="logo">
-                <a href="http://www.creative-tim.com" class="simple-text">
+                <a href="<?php echo base_url()?>dashboard" class="simple-text">
                     tourVN.com
                 </a>
             </div>
 
             <ul class="nav">
                 <li class="active">
-                    <a href="dashboard.html">
+                    <a href="<?php echo base_url()?>admin/users">
                         <i class="pe-7s-graph"></i>
-                        <p>Dashboard</p>
+                        <p>Danh sách tour</p>
                     </a>
                 </li>
                 <li>
-                    <a href="user.html">
+                    <a href="<?php echo base_url()?>admin/users/add">
                         <i class="pe-7s-user"></i>
-                        <p>User Profile</p>
+                        <p>Thêm tour</p>
                     </a>
                 </li>
                 <li>

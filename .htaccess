@@ -1,4 +1,4 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /webtour/index.php?/$1 [L]
+RewriteRule ^(.*)$ /web_tour_php34/index.php?/$1 [L]

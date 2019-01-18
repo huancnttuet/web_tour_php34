@@ -13,12 +13,16 @@ class Users extends MY_Controller
 
     public function index()
     {
-        // $data = $this->users_model->get('*', array(), array(), 0, 10, array('id'=>'DESC'));
-        // parent::_render_backend_view('backend/users/index', array('data'=>$data));
+    	$id_delete = $this->input->get('id');
+		$this->user_model->delete($id_delete);
+         $data = $this->user_model->get('*', array(), array(), 0, 10, array('id_tour'=>'DESC'));
+         parent::_render_backend_view('backend/admin/index', array('data'=>$data));
     }
 
     public function add()
     {
+		$id_update = $this->input->get('id');
+		$data = $this->user_model->get('*', array('id_tour'=>$id_update), array(), 0, 10, array());
         if (isset($_POST['submit'])) {
             $name_tour = $this->input->post('name_tour');
             $price = $this->input->post('price');
@@ -68,6 +72,7 @@ class Users extends MY_Controller
         }
         parent::_render_backend_view('backend/admin/add', null);
     }
+
 
     
 }
