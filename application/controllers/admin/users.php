@@ -73,6 +73,12 @@ class Users extends MY_Controller
         parent::_render_backend_view('backend/admin/add', null);
     }
 
-
+    function logout()
+    {
+        if ($this->session->userdata('login')) {
+            $this->session->unset_userdata('login');
+           redirect(base_url().'admin/login/index');  
+        }
+    }
     
 }

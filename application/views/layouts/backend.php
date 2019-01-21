@@ -152,7 +152,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                            <a href="">
-                               <p>Account</p>
+                <li><p class="text-center" style="padding-top: 21px;">Xin chào, 
+                <span style="color: red"><?php echo $this->session->userdata('login');?></span></p></li>
                             </a>
                         </li>
                         <li class="dropdown">
@@ -174,7 +175,7 @@
                               </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<?php echo base_url()?>admin/users/logout">
                                 <p>Log out</p>
                             </a>
                         </li>
